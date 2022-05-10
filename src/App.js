@@ -1,10 +1,12 @@
 import { Component } from 'react'
+import WeatherInfo from './components/WeatherInfo'
+import './App.css'
 
 export default class App extends Component {
   render() {
     return (
-      <main>
-        <h1>App</h1>
+      <main className='main'>
+        <WeatherInfo />
       </main>
     )
   }
