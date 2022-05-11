@@ -7,6 +7,7 @@ export default function WeatherInfo () {
     const [valueSearch, setValueSearch] = useState('')
     const [city, setCity] = useState('?')
     const [temp, setTemp] = useState(0)
+    const [feelsLike, setFeelsLike] = useState(0)
 
 
     return (
@@ -24,6 +25,7 @@ export default function WeatherInfo () {
                         .then(json => {
                             setCity(json.name)
                             setTemp(json.main.temp)
+                            setFeelsLike(json.main.feels_like)
                         })
                     }}
                 >
@@ -32,6 +34,7 @@ export default function WeatherInfo () {
             </div>
             <h2>Weather in {city}</h2>
             <h2>{temp}°C</h2>
+            <h2>Feels Like {feelsLike}°C</h2>
         </main>
     )
 }
