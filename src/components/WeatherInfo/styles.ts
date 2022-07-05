@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const Container = styled.section`
     width: 400px;
     height: 320px;
     position: absolute;

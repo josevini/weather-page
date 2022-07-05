@@ -21,12 +21,13 @@ export default function WeatherInfo() {
 						setCity(data.name)
 						setTemp(data.main.temp)
 						setFeelsLike(data.main.feels_like)
+						console.log(data.weather[0].description)
 					})
 				}}>
 					<FaSearch />
 				</ButtonSearch>
 			</Form>
-			<Text>Weather in {city}</Text>
+			<Text>Clima em {city}</Text>
 			<Text>{temp}°C</Text>
 			<Text>Feels Like {feelsLike}°C</Text>
 		</Container>
